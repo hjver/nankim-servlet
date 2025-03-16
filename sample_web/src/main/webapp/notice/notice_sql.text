@@ -1,0 +1,16 @@
+drop table notice;
+
+create table notice(
+nidx int unsigned auto_increment comment '자동증가값',
+subject varchar(100) not null comment '게시판 제목',
+writer char(50) not null comment '글쓴이',
+passwd varchar(200) not null comment '암호화된 패스워드',
+texts text not null comment 'editor 내용',
+filenm varchar(200) null comment '사용자가 업로드한 파일명',
+nfile text null comment '서버에 저장된 파일경로 및 파일명',
+nview int unsigned not null default 1 comment '조회수',
+ndate timestamp not null default current_timestamp comment '등록일',
+primary key (nidx)
+);
+
+10자이상 입력해 주세요.
